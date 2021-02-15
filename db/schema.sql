@@ -1,0 +1,9 @@
+DROP DATABASE IF EXISTS pantryDB;
+
+CREATE DATABASE pantryDB;
+
+USE pantryDB;
+
+CREATE TABLE pantry(
+    
+);
