@@ -1,0 +1,23 @@
+{
+  "name": "project-2-the-pantry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/traceysaada/Project-2-The-Pantry.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/traceysaada/Project-2-The-Pantry/issues"
+  },
+  "homepage": "https://github.com/traceysaada/Project-2-The-Pantry#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0"
+  }
+}
