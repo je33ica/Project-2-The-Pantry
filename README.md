@@ -1,15 +1,15 @@
 # Project-2-The-Pantry :pencil2: :clipboard::bar_chart:
 
-    # This README has been licensed using :
-    [![License Badge](https://img.shields.io/static/v1?label=License&message=Unlicense&color=blue)]
+  # This README has been licensed using :
+  [![License Badge](https://img.shields.io/static/v1?label=License&message=Unlicense&color=blue)]
     
 # Authors: Tracey Saada,Harry Stead, Babak Bigdeli, Jessica O'keeffe
         
  ## Table of Contents
-    *[Description](#description)
-
-    * [Installation](#instalation)
-      
+  *[Description](#description)
+  
+  * [Installation](#instalation)
+     
     * [Usage](#usage)
 
     * [License](#license)  
