@@ -1,14 +1,14 @@
 const express = require("express");
 var db = require("./models");
 const expressHandleBars = require("express-handlebars");
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
-const htmlrouter = require("./routes/html-routes")
+const htmlrouter = require("./routes/html-routes.js")
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(__dirname));
+app.use(express.static('public'));
 app.engine("handlebars", expressHandleBars({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
