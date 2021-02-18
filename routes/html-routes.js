@@ -3,10 +3,9 @@ const path = require("path");
 
 module.exports = function (app) {
   app.get("/", (req, res) => {
-    if (req.user) {
-      res.redirect("/members");
+    res.render("index")
     }
-    res.sendFile(path.join(__dirname, "../views/layouts/main.handlebars"));
-  });
-
+    
+  )
 };
+  
