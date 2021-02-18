@@ -16,7 +16,7 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
     },
     expiration: {
-      type: DataTypes.DATE,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     category: {
