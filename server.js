@@ -1,16 +1,18 @@
 const express = require("express");
 var db = require("./models");
-const routes = require("./controllers/pantry-controller");
 const expressHandleBars = require("express-handlebars");
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const app = express();
+
+const htmlrouter = require("./routes/html-routes")
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(__dirname));
-app.use(routes);
 app.engine("handlebars", expressHandleBars({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+htmlrouter(app);
 
 db.sequelize.sync().then(function () {
   app.listen(PORT, function () {
@@ -18,4 +20,4 @@ db.sequelize.sync().then(function () {
   });
 });
 
-//app.listen(PORT, () => console.log("aplication is running" + PORT));
+
