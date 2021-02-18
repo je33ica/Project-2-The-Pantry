@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "root",
-    "password": "Catherine62#",
+    "password": "2040365",
     "database": "pantryDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "Catherine62#",
+    "password": "2040365",
     "database": "pantryDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "Catherine62#",
+    "password": "2040365",
     "database": "pantryDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
