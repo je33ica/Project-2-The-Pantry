@@ -4,6 +4,10 @@ const expressHandleBars = require("express-handlebars");
 const PORT = process.env.PORT || 3000;
 const app = express();
 
+const moment = require("moment"); // require
+moment().format();
+var pikaday = require("pikaday");
+
 const htmlrouter = require("./routes/html-routes.js");
 const apirouter = require("./routes/api-routes.js");
 
