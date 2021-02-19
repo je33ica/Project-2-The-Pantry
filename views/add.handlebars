@@ -7,25 +7,52 @@
     <label for="exampleInputPassword1">Quantity</label>
     <input type="input" class="form-control" id="quantityInput" placeholder="quantity">
   </div>
-    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Storage Condition</label>
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Storage Condition</label>
   <select class="custom-select my-1 mr-sm-2" id="storageInput">
     <option selected>Choose...</option>
     <option value="1">Dry</option>
     <option value="2">Perishable</option>
     <option value="3">Frozen</option>
   </select>
-   <div class="form-group">
+
+  <div class="form-group">
+    <input type="text" id="datepicker">
     <label for="exampleInputPassword1">Expiration Date</label>
-    <input type="input" class="form-control" id="expirationInput" placeholder="Expiration">
+    <div class="dates-wrapper group">
+
+      <div class="field clearfix date-range-start date-wrapper">
+        <div class="label">
+          <label for="datepicker-start">Start:</label>
+        </div>
+        <div class="input">
+          <input type="date" name="experience-start" id="datepicker-start" class="input-text" placeholder="dd/mm/yyyy">
+        </div>
+        <a href="#" class="calendar-btn calendar-start hide-text">View calendar</a>
+      </div>
+
+      <div class="field clearfix date-range-start date-wrapper">
+        <div class="label">
+          <label for="datepicker-end">End:</label>
+        </div>
+        <div class="input">
+          <input type="date" name="experience-end" id="datepicker-end" class="input-text" placeholder="dd/mm/yyyy">
+        </div>
+        <a href="#" class="calendar-btn hide-text">View calendar</a>
+      </div>
+
+    </div>
+
+    {{!-- <input type="input" class="form-control" id="expirationInput" placeholder="Expiration"> --}}
   </div>
-      <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Category</label>
+
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Category</label>
   <select class="custom-select my-1 mr-sm-2" id="categoryInput">
     <option selected>Choose...</option>
     <option value="1">Fruits</option>
     <option value="2">Vegetables</option>
     <option value="3">Fish</option>
   </select>
-   <div class="form-group">
+  <div class="form-group">
     <label for="exampleInputPassword1">Price</label>
     <input type="input" class="form-control" id="priceInput" placeholder="Price">
   </div>

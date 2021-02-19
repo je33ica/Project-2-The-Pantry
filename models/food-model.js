@@ -1,13 +1,13 @@
-module.exports = function (sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
   var Food = sequelize.define("Food", {
-    name: { 
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1, 40]
-      }
+        len: [1, 40],
+      },
     },
-    quantity: { 
+    quantity: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
@@ -16,9 +16,12 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
     },
     expiration: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DATEONLY,
+      unique: true,
+      defaultValue: DataTypes.NOW,
       allowNull: false,
     },
+
     category: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -27,10 +30,9 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [1, 40]
-      }
-    }
-    
+        len: [1, 40],
+      },
+    },
   });
   return Food;
 };

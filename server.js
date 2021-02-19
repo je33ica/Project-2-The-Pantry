@@ -15,11 +15,9 @@ app.set("view engine", "handlebars");
 
 htmlrouter(app);
 apirouter(app);
-
-db.sequelize.sync({force: true}).then(function () {
+//force true is for dev use only and will be removed when live
+db.sequelize.sync({ force: true }).then(function () {
   app.listen(PORT, function () {
     console.log("listening on port", PORT);
   });
 });
-
-
