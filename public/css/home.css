@@ -2,8 +2,8 @@
   font-family: "Poppins", sans-serif;
 }
 
-.navbar-brand{
-    margin-left: 20px;
+.navbar-brand {
+  margin-left: 20px;
 }
 
 ul.navbar-nav {
@@ -22,9 +22,9 @@ ul.navbar-nav a:hover {
 }
 
 ul.navbar-nav a {
-    color:black !important;
-    padding: 4px;
-    margin-right: 8px;
+  color: black !important;
+  padding: 4px;
+  margin-right: 8px;
 }
 
 .navbar-float-right {
@@ -39,21 +39,28 @@ ul.navbar-nav a {
 }
 
 .sidebar-form {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 30rem;
-    padding: 20px;
-    height: 100%;
-    box-shadow: 2px 2px 50px rgb(221, 221, 221);
-    background: white;
-    border-radius: 1rem;
-    transform: translateX(-100%);
-    transition: all 0.5s ease;
-    opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30rem;
+  padding: 20px;
+  height: 100%;
+  box-shadow: 2px 2px 50px rgb(221, 221, 221);
+  background: white;
+  border-radius: 1rem;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  opacity: 0;
 }
 
 .active-form {
-    transform: translateX(0%);
-    opacity: 1;
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.form-group {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 5px;
 }
