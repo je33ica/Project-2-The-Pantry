@@ -31,6 +31,9 @@ var myChart = new Chart(ctx, {
   },
 });
 
+let dryArray = [];
+let perishableArray = [];
+let frozenArray = [];
 
 function getData() {
   let myFetch = fetch("http://localhost:3000/api/foods");
@@ -39,10 +42,14 @@ function getData() {
     response.json().then(function(text) {
       console.log(text);
       for (var i = 0; i < text.length; i++) {
-         const numOfItem = text[i]; 
-         if (numOfItem.storageCondition === "dry"){
-           console.log (numOfItem)
-         }
+        const numOfItem = text[i];
+        if (numOfItem.storageCondition === "dry") {
+          dryArray.push(numOfItem);
+        } else if (numOfItem.storageCondition === "perishable") {
+          perishableArray.push(numOfItem);
+        } else if (numOfItem.storageCondition === "frozen") {
+          frozenArray.push(numOfItem);
+        }
       }
     });
   });
