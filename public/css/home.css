@@ -35,7 +35,7 @@ ul.navbar-nav a {
 #myChart {
   position: absolute;
   top: 12%;
-  right: 34%;
+  right: 32%;
 }
 
 .sidebar-form {
@@ -62,5 +62,11 @@ ul.navbar-nav a {
   justify-content: center;
   align-items: center;
   margin: auto;
-  margin-top: 5px;
+  margin-top: 15px;
 }
+
+.form-heading {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
