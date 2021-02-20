@@ -11,7 +11,6 @@ async function chartIt() {
   const myDoughnutChart = new Chart(ctx, {
     type: "doughnut",
     data: {
-      labels: ["DRY", "PERISHABLE", "FROZEN"],
       datasets: [
         {
           label: "# of food",

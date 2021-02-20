@@ -6,11 +6,6 @@ ul.navbar-nav {
   align-content: center;
   justify-content: center;
   margin: auto;
-  color: black;
-}
-
-.navbar-brand {
-  margin-left: 20px;
 }
 
 .navbar-nav {
@@ -19,6 +14,13 @@ ul.navbar-nav {
 
 ul.navbar-nav a:hover {
   border-bottom: 1px black solid !important;
+  opacity: 0.8;
+}
+
+ul.navbar-nav a {
+    color:black !important;
+    padding: 4px;
+    margin-right: 8px;
 }
 
 .navbar-float-right {
@@ -27,7 +29,7 @@ ul.navbar-nav a:hover {
 }
 
 #myChart {
-  margin: auto;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  top: 12%;
+  right: 34%;
 }
