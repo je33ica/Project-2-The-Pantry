@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
     },
     expiration: {
-      type: DataTypes.DATEONLY,
+      type: DataTypes.DATE,
       unique: true,
       defaultValue: DataTypes.NOW,
       allowNull: false,
