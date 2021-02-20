@@ -14,4 +14,7 @@ module.exports = function(app) {
   app.get("/frozen", (req, res) => {
     res.render("frozen");
   });
+  app.get("/dry", (req, res) => {
+    res.render("dry");
+  });
 };
