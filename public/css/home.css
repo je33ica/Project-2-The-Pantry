@@ -1,0 +1,33 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+ul.navbar-nav {
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+  color: black;
+}
+
+.navbar-brand {
+  margin-left: 20px;
+}
+
+.navbar-nav {
+  font-size: 14px;
+}
+
+ul.navbar-nav a:hover {
+  border-bottom: 1px black solid !important;
+}
+
+.navbar-float-right {
+  position: absolute;
+  right: 50px;
+}
+
+#myChart {
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
