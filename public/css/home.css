@@ -30,6 +30,19 @@ ul.navbar-nav a {
 .navbar-float-right {
   position: absolute;
   right: 50px;
+  top: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.35rem;
+  border-radius: 5px;
+  border: 2px solid rgb(65, 65, 65);
+  transition: all 0.3s ease;
+}
+
+.navbar-float-right:hover {
+  background: rgb(65, 65, 65);
+  color: white;
 }
 
 #myChart {
@@ -66,7 +79,6 @@ ul.navbar-nav a {
 }
 
 .form-heading {
-    text-align: center;
-    margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 10px;
 }
-
