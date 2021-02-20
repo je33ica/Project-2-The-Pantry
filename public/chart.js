@@ -1,14 +1,20 @@
-getData();
+let dryArray = [];
+let perishableArray = [];
+let frozenArray = [];
+chartData()
 
-var ctx = document.getElementById("myChart");
-var myChart = new Chart(ctx, {
+async function chartData() {
+  await getData(); 
+ 
+const ctx = document.getElementById("myChart");
+const myChart = new Chart(ctx, {
   type: "doughnut",
   data: {
     labels: ["DRY", "PERISHABLE", "FROZEN"],
     datasets: [
       {
         label: "# of food",
-        data: [12, 19, 3],
+        data: [dryArray, perishableArray, frozenArray],
         backgroundColor: [
           "rgba(255, 99, 132, 0.5)",
           "rgba(54, 162, 235, 0.2)",
@@ -30,13 +36,10 @@ var myChart = new Chart(ctx, {
     responsive: false,
   },
 });
+}
 
-let dryArray = [];
-let perishableArray = [];
-let frozenArray = [];
-
-function getData() {
-  let myFetch = fetch("http://localhost:3000/api/foods");
+async function getData() {
+  let myFetch = await fetch("http://localhost:3000/api/foods");
 
   myFetch.then(function(response) {
     response.json().then(function(text) {
