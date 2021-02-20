@@ -1,14 +1,18 @@
-getData();
-
-var ctx = document.getElementById("myChart");
-var myChart = new Chart(ctx, {
+let dryArray = [];
+let perishableArray = [];
+let frozenArray = [];
+chartData()
+async function chartData() {
+  await getData(); 
+const ctx = document.getElementById("myChart");
+const myChart = new Chart(ctx, {
   type: "doughnut",
   data: {
     labels: ["DRY", "PERISHABLE", "FROZEN"],
     datasets: [
       {
         label: "# of food",
-        data: [12, 19, 3],
+        data: [dryArray, perishableArray, frozenArray],
         backgroundColor: [
           "rgba(255, 99, 132, 0.5)",
           "rgba(54, 162, 235, 0.2)",
@@ -30,19 +34,21 @@ var myChart = new Chart(ctx, {
     responsive: false,
   },
 });
-
-
-function getData() {
-  let myFetch = fetch("http://localhost:3000/api/foods");
-
+}
+async function getData() {
+  let myFetch = await fetch("http://localhost:3000/api/foods");
   myFetch.then(function(response) {
     response.json().then(function(text) {
       console.log(text);
       for (var i = 0; i < text.length; i++) {
-         const numOfItem = text[i]; 
-         if (numOfItem.storageCondition === "dry"){
-           console.log (numOfItem)
-         }
+        const numOfItem = text[i];
+        if (numOfItem.storageCondition === "dry") {
+          dryArray.push(numOfItem);
+        } else if (numOfItem.storageCondition === "perishable") {
+          perishableArray.push(numOfItem);
+        } else if (numOfItem.storageCondition === "frozen") {
+          frozenArray.push(numOfItem);
+        }
       }
     });
   });
