@@ -11,4 +11,7 @@ module.exports = function(app) {
   app.get("/perishable", (req, res) => {
     res.render("perishable");
   });
+  app.get("/frozen", (req, res) => {
+    res.render("frozen");
+  });
 };
