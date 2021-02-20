@@ -32,6 +32,17 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/dry", (req, res) => {
+    db.Food.findAll({
+      where: {
+        storageCondition: "dry",
+      },
+    }).then((foodResp) => {
+      res.render("dry", { food: foodResp });
+      console.log("response in api route", foodResp);
+      //   console.log("response in api route", { Food: dataValues });
+    });
+  });
 
   //POST request, add food item to database.
   app.post("/api/foods", (req, res) => {
