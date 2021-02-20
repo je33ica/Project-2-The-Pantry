@@ -2,6 +2,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+.navbar-brand{
+    margin-left: 20px;
+}
+
 ul.navbar-nav {
   align-content: center;
   justify-content: center;
@@ -32,4 +36,23 @@ ul.navbar-nav a {
   position: absolute;
   top: 12%;
   right: 34%;
+}
+
+.sidebar-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25rem;
+    height: 100%;
+    box-shadow: 2px 2px 50px rgb(221, 221, 221);
+    background: white;
+    border-radius: 1rem;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.active-form {
+    transform: translateX(0%);
+    opacity: 1;
 }
