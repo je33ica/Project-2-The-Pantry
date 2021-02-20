@@ -38,6 +38,12 @@ function getData() {
   myFetch.then(function(response) {
     response.json().then(function(text) {
       console.log(text);
+      for (var i = 0; i < text.length; i++) {
+         const numOfItem = text[i]; 
+         if (numOfItem.storageCondition === "dry"){
+           console.log (numOfItem)
+         }
+      }
     });
   });
 }
