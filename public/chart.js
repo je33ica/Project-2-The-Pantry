@@ -36,7 +36,7 @@ function getData() {
 
   myFetch.then(function(response) {
     response.json().then(function(text) {
-      console.log(text);
+      console.log(text + "dsdsskdjskdj");
     });
   });
 }
