@@ -55,3 +55,16 @@ if (submitBtn) {
       .catch((err) => console.log(err));
   });
 }
+
+function myFunction() {
+  var element = document.getElementById("sidebar-form");
+
+  if(element.classList[1] !== "active-form"){
+    element.classList.add("active-form")
+    console.log(element.classList);
+  }
+  else if(element.classList[1] === "active-form"){
+    element.classList.remove("active-form");
+    console.log(element.classList[1]);
+  }
+}

@@ -1,4 +1,4 @@
-window.addEventListener('load', chartIt);
+chartIt();
 
 let dryArray = [];
 let perishableArray = [];
