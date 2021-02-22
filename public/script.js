@@ -72,6 +72,7 @@ function myFunction() {
 const consumedBtn = document.querySelectorAll(".consumedBtn");
 consumedBtn.forEach((button) => {
 button.addEventListener("click",(event)=>{
-  
+const currentFood = event.target.value;
+console.log(currentFood);
 })
 })
