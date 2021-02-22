@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">The Pantry</a>
+  <a class="navbar-brand" href="#">PantryCheck</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -22,13 +22,78 @@
     </ul>
   </div>
 </nav>
-<div class="col-xs-1" align="center">
+<div id="sidebar-form" class="sidebar-form">
+  <form>
+    <h3 class="form-heading">Add Food Item</h3>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name: </label>
+      <input type="input" class="form-control" id="nameInput" placeholder="name">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Quantity: </label>
+      <input type="input" class="form-control" id="quantityInput" placeholder="quantity">
+    </div>
+    <div class="form-group">
+      <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Storage Condition: </label>
+      <select class="custom-select my-1 mr-sm-2" id="storageInput">
+        <option selected>Choose...</option>
+        <option value="dry">Dry</option>
+        <option value="perishable">Perishable</option>
+        <option value="frozen">Frozen</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <div class="dates-wrapper group">
+        <div class="field clearfix date-range-start date-wrapper">
+          <div class="label">
+            <label for="datepicker-end">Expiry Date:</label>
+          </div>
+          <div class="input">
+            <input type="date" name="experience-end" id="datepicker-end" class="input-text" placeholder="dd/mm/yyyy">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Category: </label>
+      <select class="custom-select my-1 mr-sm-2" id="categoryInput">
+        <option selected>Choose...</option>
+        <option value="1">Fruits</option>
+        <option value="2">Vegetables</option>
+        <option value="3">Fish</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Price</label>
+      <input type="input" class="form-control" id="priceInput" placeholder="Price">
+    </div>
+    <div class="form-group"></div>
+    <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+</div>
+</form>
+</div>
+<div class="row">
+   {{#each food}}
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{dataValues.name}}</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+{{!-- <div class="col-xs-1" align="center">
     <h1>Dry
 
     </h1>
 </div>
 <div class="container">
     <div class="row">
+
         <div class="card-columns mx-auto d-flex justify-content-center col-6">
             <div class="card">
                 <div class="card-body">
@@ -50,4 +115,4 @@
         </div>
 
     </div>
-</div>
+</div> --}}
