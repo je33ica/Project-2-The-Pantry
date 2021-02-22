@@ -47,7 +47,7 @@ ul.navbar-nav a {
 
 #myChart {
   position: absolute;
-  top: 12%;
+  top: 55%;
   right: 32%;
   cursor: pointer;
 }
@@ -91,4 +91,14 @@ ul.navbar-nav a {
   margin: auto;
   justify-content: center;
   align-items: center;
+}
+
+.bar-chart {
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.heading-homepage {
+  text-align: center;
+  margin-top: 10px;
 }
