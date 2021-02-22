@@ -60,17 +60,16 @@ async function getData() {
 barChartIt();
 
 let dateKeys = [];
-let dateValues =[];
-let todaysDate;
+let dateValues = [];
+let todaysDateKey;
 let todaysDateValue;
 
 async function barChartIt() {
   await getDataTwo();
-  console.log(dateKeys);
   new Chart(document.getElementById("bar-chart"), {
     type: "bar",
     data: {
-      labels: [todaysDate + " (today)", ...dateKeys],
+      labels: [...dateKeys],
       datasets: [
         {
           label: "No. of items for each expiry date",
@@ -81,7 +80,7 @@ async function barChartIt() {
             "#e8c3b9",
             "#c45850",
           ],
-          data: [0, ...dateValues],
+          data: [...dateValues],
         },
       ],
     },
@@ -91,6 +90,13 @@ async function barChartIt() {
         display: true,
         text: "Number of Items by Expiry Date",
       },
+      scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    }
     },
   });
 }
@@ -105,7 +111,6 @@ async function getDataTwo() {
     datesArray.push(data[i].expiration);
   }
   var occurrences = {};
-  const array = [];
 
   for (var i = 0, j = datesArray.length; i < j; i++) {
     occurrences[datesArray[i]] = (occurrences[datesArray[i]] || 0) + 1;
@@ -113,6 +118,7 @@ async function getDataTwo() {
 
   console.log(occurrences)
   const objectArray = Object.entries(occurrences).sort();
+  todaysDate = moment().format('YYYY-MM-DD');
 
   objectArray.forEach(([key, value]) => {
     console.log(key); 
@@ -120,12 +126,6 @@ async function getDataTwo() {
     dateValues.push(value)
     console.log(value); 
   });
-
-  todaysDate = moment().format('YYYY-MM-DD');
-  // dateKeys = Object.keys(occurrences).sort();
-  // console.log(dateKeys);
-  // dateValues = Object.values(occurrences);
-
 }
 
 
