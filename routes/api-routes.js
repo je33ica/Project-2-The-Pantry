@@ -22,4 +22,15 @@ module.exports = function(app) {
       res.json(foodResp);
     });
   });
+
+  app.delete("/api/foods", (req, res) => {
+    db.Food.destroy({
+      where:
+      {
+        id: req.params.id
+      }
+    }).catch(error=> console.log(error))
+  })
 };
+
+

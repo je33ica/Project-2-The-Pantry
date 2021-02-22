@@ -68,3 +68,10 @@ function myFunction() {
     console.log(element.classList[1]);
   }
 }
+
+const consumedBtn = document.querySelectorAll(".consumedBtn");
+consumedBtn.forEach((button) => {
+button.addEventListener("click",(event)=>{
+  
+})
+})
