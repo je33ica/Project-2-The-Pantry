@@ -23,7 +23,7 @@ module.exports = function(app) {
     });
   });
 
-  app.delete("/api/foods", (req, res) => {
+  app.delete("/api/foods/:id", (req, res) => {
     db.Food.destroy({
       where:
       {

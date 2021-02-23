@@ -71,8 +71,18 @@ function myFunction() {
 
 const consumedBtn = document.querySelectorAll(".consumedBtn");
 consumedBtn.forEach((button) => {
-button.addEventListener("click",(event)=>{
-const currentFood = event.target.value;
-console.log(currentFood);
-})
-})
+  button.addEventListener("click", (event) => {
+    const id = event.target.value;
+    fetch(`/api/foods/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => console.log(err));
+      window.location.reload();
+  });
+});
