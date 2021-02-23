@@ -1,48 +1,15 @@
+<link rel="stylesheet" href="/public/css/home.css" type="text/css" />
+
+
 <div>
-{{>nav}}
+  {{>nav}}
 </div>
-<div class="row">
-  {{#each food}}
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">{{dataValues.name}}</h5>
-        <p class="card-text">Expiry date: {{dataValues.expiration}}</p>
-        <p class="card-text">Product category: {{dataValues.category}}</p>
-        <p class="card-text">Price: {{dataValues.price}}</p>
-        <p id="currentDay" class="lead"></p>
-        <button value={{dataValues.id}} class="btn btn-primary consumedBtn">Consume</button>
-        <img src="" alt="">
-      </div>
-    </div>
-  </div>
-  {{/each}}
+<div class="col-xs-1" align="center">
+  <h1>Dry
+
+  </h1>
 </div>
 
-    </h1>
+<div>
+  {{>cards}}
 </div>
-<div class="container">
-    <div class="row">
-
-        <div class="card-columns mx-auto d-flex justify-content-center col-6">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title"> Items in Dry Store</h2>
-
-
-                    <ul class="dry-list">
-                        {{#each food}}
-                        <li>
-                            {{dataValues.name}}
-                            {{dataValues.expiration}}
-                        </li>
-
-                        {{/each}}
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div> 
