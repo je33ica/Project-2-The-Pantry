@@ -102,3 +102,14 @@ ul.navbar-nav a {
   text-align: center;
   margin-top: 10px;
 }
+.btn {
+  color: #fff;
+  background-color: #4ad395;
+  border-color: #4ad395;
+}
+.btn:hover{
+  background-color: #4ad395;
+  cursor: pointer;
+  border-color: #4ad395;
+  opacity: 0.9;
+}
