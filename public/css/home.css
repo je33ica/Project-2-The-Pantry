@@ -1,6 +1,34 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+.navbar.navbar-center {
+  display: inline-block;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 100%;
+}
+.navbar.navbar-center li,
+.nav.nav-center li a {
+  display: inline;
+  float: none;
+  line-height: 40px;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  display: flex !important;
+  justify-content: space-around;
+  flex-basis: auto;
+}
+
+.navbar.center .navbar-inner {
+  text-align: center;
+}
+
+.navbar.center .navbar-inner .nav {
+  display: inline-block;
+  float: none;
+}
 
 .navbar-brand {
   margin-left: 20px;
@@ -25,6 +53,14 @@ ul.navbar-nav a {
   color: black !important;
   padding: 4px;
   margin-right: 8px;
+}
+.navbar-float-left {
+  position: absolute;
+  left: 50px;
+  top: 8px;
+  background: transparent;
+
+  padding: 0.35rem;
 }
 
 .navbar-float-right {
@@ -51,7 +87,6 @@ ul.navbar-nav a {
   right: 32%;
   cursor: pointer;
 }
-
 
 .sidebar-form {
   position: fixed;
@@ -86,7 +121,7 @@ ul.navbar-nav a {
   margin-bottom: 10px;
 }
 
-.row{
+.row {
   width: 77%;
   margin: auto;
   justify-content: center;
@@ -107,7 +142,7 @@ ul.navbar-nav a {
   background-color: #4ad395;
   border-color: #4ad395;
 }
-.btn:hover{
+.btn:hover {
   background-color: #4ad395;
   cursor: pointer;
   border-color: #4ad395;
