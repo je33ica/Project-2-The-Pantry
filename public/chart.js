@@ -1,5 +1,4 @@
 chartIt();
-
 let dryArray = [];
 let perishableArray = [];
 let frozenArray = [];
@@ -41,7 +40,10 @@ async function chartIt() {
 }
 
 async function getData() {
-  let myFetch = await fetch("http://localhost:3000/api/foods");
+  if (envSetting.env){
+    console.log("got it")
+  }
+  let myFetch = await fetch("https://pantrycheck.herokuapp.com/api/foods");
   const data = await myFetch.json();
   console.log(data);
 
@@ -103,7 +105,7 @@ async function barChartIt() {
 
 const datesArray = [];
 async function getDataTwo() {
-  let myFetch = await fetch("http://localhost:3000/api/foods");
+  let myFetch = await fetch("https://pantrycheck.herokuapp.com/api/foods");
   const data = await myFetch.json();
   console.log(data);
 
