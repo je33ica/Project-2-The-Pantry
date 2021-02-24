@@ -40,9 +40,7 @@ async function chartIt() {
 }
 
 async function getData() {
-  if (envSetting.env){
-    console.log("got it")
-  }
+
   let myFetch = await fetch("https://pantrycheck.herokuapp.com/api/foods");
   const data = await myFetch.json();
   console.log(data);
