@@ -1,15 +1,4 @@
-/* {
-    box-sizing: border-box;
-  } */
-
-/* body {
-  padding: 2em;
-  font-family: Arial, sans-serif;
-  font-weight: normal;
-  color: #333;
-} */
-
-.date-wrapper {
+.dates-wrapper {
   background: #f0f0f0;
   padding: 1em 1em 0 1em;
   display: inline-block;

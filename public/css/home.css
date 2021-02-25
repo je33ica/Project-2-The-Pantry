@@ -1,14 +1,16 @@
 * {
   font-family: "Poppins", sans-serif;
 }
-
+h2 {
+  text-align: center;
+  color: #283947;
+}
 .navbar.navbar-center {
   display: inline-block;
   left: 0;
   right: 0;
   text-align: center;
   width: 100%;
-
 }
 .navbar.navbar-center li,
 .nav.nav-center li a {
@@ -50,14 +52,12 @@ ul.navbar-nav a {
   padding: 4px;
   margin-right: 8px;
   color: white !important;
-
 }
 .navbar-float-left {
   position: absolute;
   left: 50px;
   top: 8px;
   background: transparent;
-
 }
 
 a {
@@ -68,8 +68,8 @@ a {
   color: white;
 }
 
-.navbar.navbar-custom { 
-  background-color:#283947 !important; 
+.navbar.navbar-custom {
+  background-color: #283947 !important;
   color: #fff;
 }
 
