@@ -19,8 +19,6 @@
 
 .navbar-expand-lg .navbar-collapse {
   display: flex !important;
-  justify-content: space-around;
-  flex-basis: auto;
 }
 .navbar.center .navbar-inner {
   text-align: center;
@@ -81,13 +79,13 @@ a {
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  border: 2px solid rgb(65, 65, 65);
+  border: 2px solid rgb(255, 255, 255);
   transition: all 0.3s ease;
   color: white;
 }
 .navbar-float-right:hover {
-  /* background: rgb(65, 65, 65); */
-  color: #fff;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 #myChart {
   position: absolute;
@@ -161,4 +159,10 @@ a {
 }
 .form-group {
   display: block;
+}
+
+.card {
+  border-radius: 20px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.13);
+  border-color: rgb(224, 224, 224);
 }
