@@ -113,3 +113,16 @@ ul.navbar-nav a {
   border-color: #4ad395;
   opacity: 0.9;
 }
+
+.pics {
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: -1;
+}
+
+.card {
+  border-radius: 20px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.13);
+}
