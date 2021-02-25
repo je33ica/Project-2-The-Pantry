@@ -72,6 +72,7 @@ const consumedBtn = document.querySelectorAll(".consumedBtn");
 consumedBtn.forEach((button) => {
   button.addEventListener("click", (event) => {
     const id = event.target.value;
+    window.location.reload();
     fetch(`/api/foods/${id}`, {
       method: "DELETE",
       headers: {
@@ -82,6 +83,5 @@ consumedBtn.forEach((button) => {
         console.log(response);
       })
       .catch((err) => console.log(err));
-      window.location.reload();
   });
 });
