@@ -40,8 +40,9 @@ async function chartIt() {
 }
 
 async function getData() {
+  // https://pantrycheck.herokuapp.com/
 
-  let myFetch = await fetch("https://pantrycheck.herokuapp.com/api/foods");
+  let myFetch = await fetch("/api/foods");
   const data = await myFetch.json();
   console.log(data);
 
@@ -61,25 +62,21 @@ barChartIt();
 
 let dateKeys = [];
 let dateValues = [];
+let colourArray2 = []
 let todaysDateKey;
 let todaysDateValue;
 
 async function barChartIt() {
   await getDataTwo();
-  new Chart(document.getElementById("bar-chart"), {
+  console.log(colourArray2)
+  const barChart = new Chart(document.getElementById("bar-chart"), {
     type: "bar",
     data: {
       labels: [...dateKeys],
       datasets: [
         {
           label: "No. of items for each expiry date",
-          backgroundColor: [
-            "#3e95cd",
-            "#8e5ea2",
-            "#3cba9f",
-            "#e8c3b9",
-            "#c45850",
-          ],
+          backgroundColor: [...colourArray2],
           data: [...dateValues],
         },
       ],
@@ -103,7 +100,7 @@ async function barChartIt() {
 
 const datesArray = [];
 async function getDataTwo() {
-  let myFetch = await fetch("https://pantrycheck.herokuapp.com/api/foods");
+  let myFetch = await fetch("/api/foods");
   const data = await myFetch.json();
   console.log(data);
 
@@ -125,8 +122,17 @@ async function getDataTwo() {
     dateKeys.push(key)
     dateValues.push(value)
     console.log(value); 
+
+    if(key < moment().format("YYYY-MM-DD")){
+      colourArray2.unshift("#A52A2A")
+    }
+    else{
+      colourArray2.push("#4AD395")
+    }
+    console.log(colourArray2)
   });
 }
+
 
 
 
