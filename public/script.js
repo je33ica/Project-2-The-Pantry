@@ -84,4 +84,5 @@ consumedBtn.forEach((button) => {
       })
       .catch((err) => console.log(err));
   });
+  
 });
