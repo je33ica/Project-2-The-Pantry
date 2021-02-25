@@ -43,12 +43,14 @@ ul.navbar-nav {
   font-size: 14px;
 }
 ul.navbar-nav a:hover {
-  border-bottom: 1px black solid !important;
+  border-bottom: 1px rgb(209, 208, 208) solid !important;
   opacity: 0.8;
 }
 ul.navbar-nav a {
   padding: 4px;
   margin-right: 8px;
+  color: white !important;
+
 }
 .navbar-float-left {
   position: absolute;
@@ -56,6 +58,19 @@ ul.navbar-nav a {
   top: 8px;
   background: transparent;
 
+}
+
+a {
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar.navbar-custom { 
+  background-color:#283947 !important; 
+  color: #fff;
 }
 
 .navbar-float-right {
@@ -68,6 +83,7 @@ ul.navbar-nav a {
   border-radius: 5px;
   border: 2px solid rgb(65, 65, 65);
   transition: all 0.3s ease;
+  color: white;
 }
 .navbar-float-right:hover {
   /* background: rgb(65, 65, 65); */
