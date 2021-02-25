@@ -1,12 +1,14 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+
 .navbar.navbar-center {
   display: inline-block;
   left: 0;
   right: 0;
   text-align: center;
   width: 100%;
+
 }
 .navbar.navbar-center li,
 .nav.nav-center li a {
@@ -20,7 +22,6 @@
   justify-content: space-around;
   flex-basis: auto;
 }
-
 .navbar.center .navbar-inner {
   text-align: center;
 }
@@ -33,24 +34,19 @@
 .navbar-brand {
   margin-left: 20px;
 }
-
 ul.navbar-nav {
   align-content: center;
   justify-content: center;
   margin: auto;
 }
-
 .navbar-nav {
   font-size: 14px;
 }
-
 ul.navbar-nav a:hover {
   border-bottom: 1px black solid !important;
   opacity: 0.8;
 }
-
 ul.navbar-nav a {
-  color: black !important;
   padding: 4px;
   margin-right: 8px;
 }
@@ -60,7 +56,6 @@ ul.navbar-nav a {
   top: 8px;
   background: transparent;
 
-  padding: 0.35rem;
 }
 
 .navbar-float-right {
@@ -70,24 +65,20 @@ ul.navbar-nav a {
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0.35rem;
   border-radius: 5px;
   border: 2px solid rgb(65, 65, 65);
   transition: all 0.3s ease;
 }
-
 .navbar-float-right:hover {
-  background: rgb(65, 65, 65);
-  color: white;
+  /* background: rgb(65, 65, 65); */
+  color: #fff;
 }
-
 #myChart {
   position: absolute;
   top: 55%;
   right: 32%;
   cursor: pointer;
 }
-
 .sidebar-form {
   position: fixed;
   top: 0;
@@ -103,36 +94,32 @@ ul.navbar-nav a {
   opacity: 0;
   z-index: 3;
 }
-
 .active-form {
   transform: translateX(0%);
   opacity: 1;
 }
-
 .form-group {
   justify-content: center;
   align-items: center;
   margin: auto;
   margin-top: 15px;
 }
-
 .form-heading {
   text-align: center;
   margin-bottom: 10px;
 }
 
 .row {
-  width: 77%;
+  /* width: 77%; */
+
   margin: auto;
   justify-content: center;
   align-items: center;
 }
-
-.bar-chart {
+/* .bar-chart {
   cursor: pointer;
   margin-top: 10px;
-}
-
+} */
 .heading-homepage {
   text-align: center;
   margin-top: 10px;
@@ -147,4 +134,15 @@ ul.navbar-nav a {
   cursor: pointer;
   border-color: #4ad395;
   opacity: 0.9;
+}
+
+.pics {
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: -1;
+}
+.form-group {
+  display: block;
 }
