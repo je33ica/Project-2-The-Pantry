@@ -5,9 +5,7 @@ let frozenArray = [];
 
 async function chartIt() {
   await getData();
-  console.log(dryArray);
   const ctx = document.getElementById("myChart");
-  console.log(dryArray.length);
   const myDoughnutChart = new Chart(ctx, {
     type: "doughnut",
     data: {
@@ -16,25 +14,14 @@ async function chartIt() {
         {
           label: "# of food",
           data: [dryArray.length, perishableArray.length, frozenArray.length],
-          backgroundColor: [
-            "rgba(255, 99, 132, 0.5)",
-            "rgba(54, 162, 235, 0.2)",
-            "rgba(255, 206, 86, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
-          ],
-          borderColor: [
-            "rgba(255,99,132,1)",
-            "rgba(54, 162, 235, 1)",
-            "rgba(255, 206, 86, 1)",
-            "rgba(75, 192, 192, 1)",
-          ],
+          backgroundColor: ["#A52A2A", "#4AD395", "#283947"],
+
           borderWidth: 1,
         },
       ],
     },
     options: {
-      //cutoutPercentage: 40,
-      responsive: false,
+      responsive: true,
     },
   });
 }
@@ -44,7 +31,6 @@ async function getData() {
 
   let myFetch = await fetch("/api/foods");
   const data = await myFetch.json();
-  console.log(data);
 
   for (var i = 0; i < data.length; i++) {
     const numOfItem = data[i];
@@ -62,11 +48,13 @@ barChartIt();
 
 let dateKeys = [];
 let dateValues = [];
+let colourArray2 = [];
 let todaysDateKey;
 let todaysDateValue;
 
 async function barChartIt() {
   await getDataTwo();
+  console.log(colourArray2);
   const barChart = new Chart(document.getElementById("bar-chart"), {
     type: "bar",
     data: {
@@ -83,15 +71,17 @@ async function barChartIt() {
       legend: { display: false },
       title: {
         display: true,
-        text: "Number of Items by Expiry Date",
+        text: "Expiration",
       },
       scales: {
-        yAxes: [{
+        yAxes: [
+          {
             ticks: {
-                beginAtZero: true
-            }
-        }]
-    }
+              beginAtZero: true,
+            },
+          },
+        ],
+      },
     },
   });
 }
@@ -100,7 +90,6 @@ const datesArray = [];
 async function getDataTwo() {
   let myFetch = await fetch("/api/foods");
   const data = await myFetch.json();
-  console.log(data);
 
   for (var i = 0; i < data.length; i++) {
     datesArray.push(data[i].expiration);
@@ -111,7 +100,6 @@ async function getDataTwo() {
     occurrences[datesArray[i]] = (occurrences[datesArray[i]] || 0) + 1;
   }
 
-  console.log(occurrences)
   const objectArray = Object.entries(occurrences).sort();
 
   objectArray.forEach(([key, value]) => {
@@ -120,8 +108,19 @@ async function getDataTwo() {
     dateValues.push(value)
     console.log(value); 
 })
+  todaysDate = moment().format("YYYY-MM-DD");
+  console.log("im today ", todaysDate);
+
+  objectArray.forEach(([key, value]) => {
+    console.log(key);
+    dateKeys.push(key);
+    dateValues.push(value);
+    console.log(value);
+
+    if (key < moment().format("YYYY-MM-DD")) {
+      colourArray2.unshift("#A52A2A");
+    } else {
+      colourArray2.push("#4AD395");
+    }
+  });
 }
-
-
-
-
