@@ -62,7 +62,7 @@ async function barChartIt() {
       datasets: [
         {
           label: "No. of items for each expiry date",
-          backgroundColor: [...colourArray2],
+          backgroundColor: "#4AD395",
           data: [...dateValues],
         },
       ],
@@ -101,6 +101,13 @@ async function getDataTwo() {
   }
 
   const objectArray = Object.entries(occurrences).sort();
+
+  objectArray.forEach(([key, value]) => {
+    console.log(key); 
+    dateKeys.push(key)
+    dateValues.push(value)
+    console.log(value); 
+})
   todaysDate = moment().format("YYYY-MM-DD");
   console.log("im today ", todaysDate);
 
