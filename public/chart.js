@@ -54,7 +54,7 @@ let todaysDateValue;
 
 async function barChartIt() {
   await getDataTwo();
-//   console.log(colourArray2);
+  //   console.log(colourArray2);
   const barChart = new Chart(document.getElementById("bar-chart"), {
     type: "bar",
     data: {
@@ -103,13 +103,13 @@ async function getDataTwo() {
   const objectArray = Object.entries(occurrences).sort();
 
   objectArray.forEach(([key, value]) => {
-//     console.log(key); 
-    dateKeys.push(key)
-    dateValues.push(value)
-//     console.log(value); 
-})
+    //     console.log(key);
+    dateKeys.push(key);
+    dateValues.push(value);
+    //     console.log(value);
+  });
   todaysDate = moment().format("YYYY-MM-DD");
-//   console.log("im today ", todaysDate);
+    //console.log("im today ", todaysDate);
 
   objectArray.forEach(([key, value]) => {
     console.log(key);
@@ -124,4 +124,5 @@ async function getDataTwo() {
     }
   })
 }
+
 
