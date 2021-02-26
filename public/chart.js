@@ -122,4 +122,4 @@ async function getDataTwo() {
   } else {
     colourArray2.push("#4AD395");
   }
-}
+})}
