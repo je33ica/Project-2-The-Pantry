@@ -109,20 +109,8 @@ async function getDataTwo() {
     //     console.log(value);
   });
   todaysDate = moment().format("YYYY-MM-DD");
-    //console.log("im today ", todaysDate);
 
-  objectArray.forEach(([key, value]) => {
-    console.log(key);
-    dateKeys.push(key);
-    dateValues.push(value);
-    console.log(value);
 
-    if (key < moment().format("YYYY-MM-DD")) {
-      colourArray2.unshift("#A52A2A");
-    } else {
-      colourArray2.push("#4AD395");
-    }
-  })
 }
 
 
