@@ -5,26 +5,22 @@ The Pantry is available [here](https://pantrycheck.herokuapp.com/).
   # This README has been licensed using :
   [![License Badge](https://img.shields.io/static/v1?label=License&message=Unlicense&color=blue)]
     
-# Authors: Tracey Saada,Harry Stead, Babak Bigdeli, Jessica O'keeffe
+# Authors:  Jessica O'keeffe, Tracey Saada,Harry Stead, Babak Bigdeli
         
  ## Table of Contents
   *[Description](#description)
-  
-  * [Installation](#instalation)
      
-    * [Usage](#usage)
+  * [Usage](#usage)
 
-    * [License](#license)  
+  * [License](#license)  
 
-    * [Language](#language)
+  * [Language](#language)
 
-    * [Questions](#questions)
+
           
 
     ## Description:
-    an app to help keep track of food in your kitchen and track waste
-
-    ## Installation:
+    An app to help keep track of food in your kitchen and track waste
     
 
     ## Usage:
@@ -38,11 +34,9 @@ The Pantry is available [here](https://pantrycheck.herokuapp.com/).
     https://github.com/traceysaada/Project-2-The-Pantry 
     [GitHub](https://github.com/https://github.com/traceysaada/Project-2-The-Pantry)
 
-    ## language used:
-    Javascript,HTML,CSS
+    ## language & tech used:
+    Javascript,HTML,CSS, handle bars, pikaday, chartJS
 
-    ## Questions:
-    Contact Tracey Saada,Harry Stead, Babak Bigdeli, Jessica O'keeffe with any questions at 
 
     # [![ForTheBadge built-with-love](https://ForTheBadge.com/images/badges/built-with-love.svg)]
 
